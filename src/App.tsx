@@ -1,5 +1,9 @@
-import { Avatar } from './components/Avatar'
+import { GlobalStyle } from './styles/global'
 
 export function App() {
-  return <Avatar />
+  return (
+    <>
+      <GlobalStyle />
+    </>
+  )
 }
