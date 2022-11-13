@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
    -webkit-font-smoothing: antialiased;
+   background-color: ${props => props.theme['blueviolet-100']};
   }
   body, input, textarea, button {
     font-family: 'Inter', sans-serif;
