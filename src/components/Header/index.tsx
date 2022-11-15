@@ -1,19 +1,19 @@
-import { Container, Logo } from './styles'
+import { HeaderContainer, Navigation, Logo, NavigationList } from './styles'
 
 export function Header() {
   return (
-    <Container>
-      <nav>
+    <HeaderContainer>
+      <Navigation>
         <Logo>Mosaico</Logo>
-        <ul>
+        <NavigationList>
           <li>
             <a href="#">My Gallery</a>
           </li>
           <li>
             <a href="#">Add Photo</a>
           </li>
-        </ul>
-      </nav>
-    </Container>
+        </NavigationList>
+      </Navigation>
+    </HeaderContainer>
   )
 }

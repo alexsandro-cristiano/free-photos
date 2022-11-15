@@ -1,33 +1,34 @@
 import styled from 'styled-components'
 
-export const Container = styled.footer`
-  height: 5rem;
-  margin-top: 1.5rem;
+export const FooterContainer = styled.footer`
+  background: ${props => props.theme['blueviolet-700']};
+  color: ${props => props.theme['blueviolet-100']};
+`
+export const FooterContent = styled.section`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background: ${props => props.theme['blueviolet-600']};
-  color: ${props => props.theme['blueviolet-200']};
-`
-export const Direitos = styled.section`
-  font-size: 1rem;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 100%;
 `
 export const Midias = styled.section`
   h3 {
-    font-weight: 400;
     font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
   }
   ul {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 1rem;
     li {
       a {
-        color: ${props => props.theme['blueviolet-200']};
-        opacity: 0.5;
-        transition: all 0.3s ease-in-out;
+        color: ${props => props.theme['blueviolet-300']};
         &:hover {
-          opacity: 1;
+          color: ${props => props.theme['blueviolet-100']};
+          transition: color 0.3s;
         }
       }
     }
