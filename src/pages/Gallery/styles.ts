@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 export const GalleryContainer = styled.main`
-  ul {
-    max-width: 1120px;
-    width: 100%;
-    margin: 2rem auto;
-
+  margin-bottom: 2rem;
+  list-style: none;
+  min-height: 100vh;
+  padding: 0 2rem;
+  @media screen and (min-width: 500px) {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
+    /* grid-template-columns: repeat(3fr, auto-fit); */
     grid-gap: 1.2rem 1rem;
+    padding: 0 1rem;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 0;
   }
 `;
 
@@ -42,13 +46,22 @@ export const SubTitle = styled.span`
     font-size: 1.125rem;
   }
 `;
-export const GridImages = styled.ul`
-  ul {
+export const Grid = styled.div`
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 0.8rem;
+  div {
+    width: 320px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  img {
+    display: block;
+    border-radius: 2px;
     width: 100%;
-    margin: 2rem auto;
-
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 1.2rem 1rem;
+    height: 100%;
   }
 `;
